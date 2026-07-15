@@ -84,3 +84,4 @@ Build v0.1.83 - 2026-07-15 09:50:50 - Match verified
 Build v0.1.84 - 2026-07-15 10:09:05 - Match verified
 Build v0.1.85 - 2026-07-15 10:35:42 - Match verified
 Build v0.1.86 - 2026-07-15 10:46:10 - Match verified
+Build v0.1.87 - 2026-07-15 10:59:53 - Match verified
