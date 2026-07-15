@@ -85,7 +85,7 @@ const CheckoutForm: React.FC = () => {
           </div>
           <div className="text-center">
             <p className="text-sm font-bold text-zinc-900">Payment Authorized!</p>
-            <p className="text-xs text-zinc-400 font-body mt-1">Redirecting you back to EasyJobs</p>
+            <p className="text-xs text-zinc-400 font-body mt-1">Redirecting you back to EZJobs</p>
           </div>
         </div>
       )}
@@ -105,7 +105,7 @@ const CheckoutForm: React.FC = () => {
         {/* Order details summary */}
         <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200/60 flex items-center justify-between text-xs font-body">
           <div>
-            <p className="font-bold text-zinc-900 font-sans">EasyJobs Premium Plan</p>
+            <p className="font-bold text-zinc-900 font-sans">EZJobs Premium Plan</p>
             {targetJob && (
               <p className="text-[10px] text-zinc-500 mt-0.5">Applying for: {targetJob.role} at {targetJob.companyName}</p>
             )}
@@ -259,7 +259,7 @@ export default function CheckoutPage() {
                 E
               </div>
               <span className="text-sm font-extrabold tracking-wider text-zinc-950 font-sans">
-                EASY-JOBS
+                EZ-JOBS
               </span>
             </div>
           </div>

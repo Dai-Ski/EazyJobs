@@ -43,7 +43,7 @@ const InfoContent: React.FC = () => {
                 E
               </div>
               <span className="text-sm font-extrabold tracking-wider text-zinc-955 font-sans font-bold">
-                EASY-JOBS
+                EZ-JOBS
               </span>
             </div>
           </div>
@@ -163,7 +163,7 @@ const InfoContent: React.FC = () => {
                   <Heart className="w-4 h-4 text-zinc-650" />
                 </h3>
                 <p className="text-zinc-700 text-xs leading-relaxed font-body">
-                  I started EasyJobs because let's be honest: the modern job search has become an exhausting, hands-on chore that leaves candidates feeling raw and completely drained. Submitting resumes manually is a tedious, repetitive motion that sucks the absolute life out of you, leaving you begging for relief. I wanted to build something that handles the friction for you—a service that gets down to business, takes the load off your hands, and performs to completion. We make sure every match hits the spot, leaving both you and the startup fully satisfied.
+                  I started EZJobs because let's be honest: candidates deserve to feel the thrill of a real buzz—that sweet, vibrating ring on your phone when a recruiter buzzes you with an immediate job offer acceptance. The manual job search is an exhausting, hands-on chore that leaves you completely drained, waiting for that phone to wake up. I wanted to build something that speeds up the connection, taking the friction off your hands so you get buzzed faster. We handle the placement details to completion, making sure every match hits the spot and rings in your next career step.
                 </p>
               </div>
 

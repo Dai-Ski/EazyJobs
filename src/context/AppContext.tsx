@@ -277,9 +277,9 @@ const mockJobs: Job[] = [
 
 const initialActivities: Activity[] = [
   { id: "act-1", text: "Sarah Jenkins completed profile setup", timestamp: "5 mins ago", type: "profile" },
-  { id: "act-2", text: "Alex Carter joined EasyJobs", timestamp: "12 mins ago", type: "join" },
+  { id: "act-2", text: "Alex Carter joined EZJobs", timestamp: "12 mins ago", type: "join" },
   { id: "act-3", text: "Sarah Jenkins compressed resume (2.4 MB ➔ 380 KB, -84%)", timestamp: "15 mins ago", type: "resume" },
-  { id: "act-4", text: "Marcus Vance joined EasyJobs", timestamp: "30 mins ago", type: "join" },
+  { id: "act-4", text: "Marcus Vance joined EZJobs", timestamp: "30 mins ago", type: "join" },
   { id: "act-5", text: "Marcus Vance compressed resume (3.8 MB ➔ 450 KB, -88%)", timestamp: "40 mins ago", type: "resume" },
 ];
 
@@ -308,19 +308,19 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   // Hydration
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedUser = localStorage.getItem("easyjobs_user");
+      const storedUser = localStorage.getItem("ezjobs_user");
       if (storedUser) setUser(JSON.parse(storedUser));
 
-      const storedProfile = localStorage.getItem("easyjobs_profile");
+      const storedProfile = localStorage.getItem("ezjobs_profile");
       if (storedProfile) setProfile(JSON.parse(storedProfile));
 
-      const storedPaid = localStorage.getItem("easyjobs_isPaid");
+      const storedPaid = localStorage.getItem("ezjobs_isPaid");
       if (storedPaid) setIsPaid(storedPaid === "true");
 
-      const storedRoles = localStorage.getItem("easyjobs_preferredRoles");
+      const storedRoles = localStorage.getItem("ezjobs_preferredRoles");
       if (storedRoles) setPreferredRoles(JSON.parse(storedRoles));
 
-      const storedConfirmed = localStorage.getItem("easyjobs_isConfirmed");
+      const storedConfirmed = localStorage.getItem("ezjobs_isConfirmed");
       if (storedConfirmed) setIsPreferencesConfirmed(storedConfirmed === "true");
     }
   }, []);
@@ -339,17 +339,17 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     };
     
     setUser(newUser);
-    localStorage.setItem("easyjobs_user", JSON.stringify(newUser));
+    localStorage.setItem("ezjobs_user", JSON.stringify(newUser));
 
     if (role === "user") {
       const updatedProfile = { ...profile, name: formattedName, email };
       setProfile(updatedProfile);
-      localStorage.setItem("easyjobs_profile", JSON.stringify(updatedProfile));
+      localStorage.setItem("ezjobs_profile", JSON.stringify(updatedProfile));
     }
 
     const newActivity: Activity = {
       id: `act-${Date.now()}`,
-      text: `${formattedName} joined EasyJobs as ${role}`,
+      text: `${formattedName} joined EZJobs as ${role}`,
       timestamp: "Just now",
       type: "join",
     };
@@ -358,13 +358,13 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem("easyjobs_user");
+    localStorage.removeItem("ezjobs_user");
   };
 
   const updateProfile = (updates: Partial<UserProfile>) => {
     const updatedProfile = { ...profile, ...updates };
     setProfile(updatedProfile);
-    localStorage.setItem("easyjobs_profile", JSON.stringify(updatedProfile));
+    localStorage.setItem("ezjobs_profile", JSON.stringify(updatedProfile));
 
     const name = user?.name || updatedProfile.name;
     const newActivity: Activity = {
@@ -388,11 +388,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
     // Reset questionnaire flags on re-upload
     setIsPreferencesConfirmed(false);
-    localStorage.removeItem("easyjobs_isConfirmed");
+    localStorage.removeItem("ezjobs_isConfirmed");
 
     setProfile((prev) => {
       const updated = { ...prev, resume: initialResume };
-      localStorage.setItem("easyjobs_profile", JSON.stringify(updated));
+      localStorage.setItem("ezjobs_profile", JSON.stringify(updated));
       return updated;
     });
 
@@ -419,7 +419,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         
         if (isFinished) {
           clearInterval(interval);
-          localStorage.setItem("easyjobs_profile", JSON.stringify(updated));
+          localStorage.setItem("ezjobs_profile", JSON.stringify(updated));
           
           const name = user?.name || prev.name;
           const reductionPercent = Math.round((1 - finalCompressedSize / fileSize) * 100);
@@ -467,8 +467,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const confirmPreferences = (roles: string[]) => {
     setPreferredRoles(roles);
     setIsPreferencesConfirmed(true);
-    localStorage.setItem("easyjobs_preferredRoles", JSON.stringify(roles));
-    localStorage.setItem("easyjobs_isConfirmed", "true");
+    localStorage.setItem("ezjobs_preferredRoles", JSON.stringify(roles));
+    localStorage.setItem("ezjobs_isConfirmed", "true");
 
     const name = user?.name || profile.name;
     const newActivity: Activity = {
@@ -482,7 +482,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const completeZohoPayment = () => {
     setIsPaid(true);
-    localStorage.setItem("easyjobs_isPaid", "true");
+    localStorage.setItem("ezjobs_isPaid", "true");
 
     const name = user?.name || profile.name;
     const checkoutActivity: Activity = {

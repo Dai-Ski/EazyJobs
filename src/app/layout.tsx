@@ -14,7 +14,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "EasyJobs AI | Automate Startup Submissions Natively",
+  title: "EZJobs AI | Automate Startup Submissions Natively",
   description: "Apply to hundreds of verified startup jobs natively while you sleep.",
 };
 

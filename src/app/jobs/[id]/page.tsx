@@ -73,7 +73,7 @@ const JobDetailsContent: React.FC = () => {
                 E
               </div>
               <span className="text-sm font-extrabold tracking-wider text-zinc-955 font-sans font-bold">
-                EASY-JOBS
+                EZ-JOBS
               </span>
             </div>
           </div>

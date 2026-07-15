@@ -43,7 +43,7 @@ const HomeContent: React.FC = () => {
               E
             </div>
             <span className="text-sm font-extrabold tracking-wider text-zinc-950 font-sans">
-              EASY-JOBS
+              EZ-JOBS
             </span>
           </div>
 
@@ -100,7 +100,7 @@ const HomeContent: React.FC = () => {
       {/* 6. Footer */}
       <footer className="border-t border-zinc-200 py-6 mt-12 bg-white/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-xs text-zinc-400 font-body">
-          <span>© 2026 EasyJobs Inc. All rights reserved.</span>
+          <span>© 2026 EZJobs Inc. All rights reserved.</span>
         </div>
       </footer>
 

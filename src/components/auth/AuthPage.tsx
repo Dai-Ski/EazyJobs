@@ -68,7 +68,7 @@ export const AuthPage: React.FC = () => {
             E
           </div>
           <span className="text-xl font-bold tracking-tight text-white font-sans">
-            EasyJobs<span className="text-zinc-400 font-normal text-xs ml-1">AI</span>
+          EZJobs<span className="text-zinc-400 font-normal text-xs ml-1">AI</span>
           </span>
         </div>
 
@@ -117,7 +117,7 @@ export const AuthPage: React.FC = () => {
 
         {/* Footer */}
         <div className="text-zinc-500 text-xs font-body z-10 flex justify-between items-center border-t border-zinc-800 pt-4">
-          <span>© 2026 EasyJobs Inc.</span>
+          <span>© 2026 EZJobs Inc.</span>
           <span className="flex items-center gap-1.5 font-semibold text-zinc-400">
             <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 animate-pulse" />
             System Live
@@ -134,8 +134,8 @@ export const AuthPage: React.FC = () => {
             <div className="w-8 h-8 rounded-lg bg-zinc-900 flex items-center justify-center text-white font-bold">
               E
             </div>
-            <span className="text-xl font-bold tracking-tight text-zinc-950 font-sans">
-              EasyJobs
+            <span className="text-xl font-bold tracking-tight text-zinc-955 font-sans">
+              EZJobs
             </span>
           </div>
 
@@ -197,7 +197,7 @@ export const AuthPage: React.FC = () => {
               <input
                 id="email"
                 type="email"
-                placeholder={role === "admin" ? "admin@easyjobs.com" : "you@example.com"}
+                placeholder={role === "admin" ? "admin@ezjobs.com" : "you@example.com"}
                 autoComplete="email"
                 {...register("email")}
                 disabled={isLoading}

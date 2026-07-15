@@ -75,7 +75,7 @@ const SettingsContent: React.FC = () => {
   };
 
   const handleDeleteAccount = () => {
-    if (confirm("Are you sure you want to permanently delete your EasyJobs account? This action is irreversible and deletes all optimized resumes.")) {
+    if (confirm("Are you sure you want to permanently delete your EZJobs account? This action is irreversible and deletes all optimized resumes.")) {
       logout();
       router.push("/auth");
     }
@@ -104,7 +104,7 @@ const SettingsContent: React.FC = () => {
                 E
               </div>
               <span className="text-sm font-extrabold tracking-wider text-zinc-955 font-sans font-bold">
-                EASY-JOBS
+                EZ-JOBS
               </span>
             </div>
           </div>
@@ -247,7 +247,7 @@ const SettingsContent: React.FC = () => {
                   {isPaid ? (
                     <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 flex items-center justify-between text-xs font-body">
                       <div>
-                        <p className="font-bold text-zinc-955">EasyJobs Premium Plan</p>
+                        <p className="font-bold text-zinc-955">EZJobs Premium Plan</p>
                         <p className="text-[10px] text-zinc-400 mt-0.5">₹29 one-time payment activated via Zoho Pay.</p>
                       </div>
                       <span className="px-2.5 py-1 rounded bg-zinc-900 text-white text-[9px] font-bold uppercase select-none tracking-wider">Plan Active</span>
@@ -562,7 +562,7 @@ const SettingsContent: React.FC = () => {
                   <div className="space-y-2 border-l-2 border-zinc-200 pl-4 py-1">
                     <h4 className="font-bold text-zinc-900">How do I verify candidate matches?</h4>
                     <p>
-                      EasyJobs scans target resume vectors dynamically. You must drag and drop your resume in the Profile pane. Our platform automatically downsamples files inside the sandbox cache to extract keywords. Once confirmed, listings in the feed displaying your roles will badge matched status automatically.
+                      EZJobs scans target resume vectors dynamically. You must drag and drop your resume in the Profile pane. Our platform automatically downsamples files inside the sandbox cache to extract keywords. Once confirmed, listings in the feed displaying your roles will badge matched status automatically.
                     </p>
                   </div>
 
@@ -592,8 +592,8 @@ const SettingsContent: React.FC = () => {
                       className="space-y-3.5 text-left"
                     >
                       <input type="hidden" name="access_key" value="a296f968-7472-42b2-995a-a404f870bbd3" />
-                      <input type="hidden" name="subject" value="New Support Query from EasyJobs Dashboard" />
-                      <input type="hidden" name="from_name" value="EasyJobs Client Support" />
+                      <input type="hidden" name="subject" value="New Support Query from EZJobs Dashboard" />
+                      <input type="hidden" name="from_name" value="EZJobs Client Support" />
 
                       <div className="space-y-1">
                         <label className="text-[10px] uppercase tracking-wider font-bold text-zinc-400 block font-sans">
@@ -644,7 +644,7 @@ const SettingsContent: React.FC = () => {
                     <Heart className="w-4 h-4 text-zinc-650" />
                   </h4>
                   <p className="text-zinc-700 text-xs leading-relaxed font-body">
-                    I started EasyJobs because let's be honest: the modern job search has become an exhausting, hands-on chore that leaves candidates feeling raw and completely drained. Submitting resumes manually is a tedious, repetitive motion that sucks the absolute life out of you, leaving you begging for relief. I wanted to build something that handles the friction for you—a service that gets down to business, takes the load off your hands, and performs to completion. We make sure every match hits the spot, leaving both you and the startup fully satisfied.
+                    I started EZJobs because let's be honest: candidates deserve to feel the thrill of a real buzz—that sweet, vibrating ring on your phone when a recruiter buzzes you with an immediate job offer acceptance. The manual job search is an exhausting, hands-on chore that leaves you completely drained, waiting for that phone to wake up. I wanted to build something that speeds up the connection, taking the friction off your hands so you get buzzed faster. We handle the placement details to completion, making sure every match hits the spot and rings in your next career step.
                   </p>
                 </div>
 
